@@ -1,0 +1,586 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #e9dabf;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 1500px;
+  background-color: #e9dabf;
+}
+
+nav {
+  height: 110px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  text-align: center;
+}
+nav ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #17171f;
+  transition: all 0.3s;
+}
+nav ul li a:hover {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+}
+nav ul li #nav-logo {
+  width: 110px;
+}
+
+#aboutme {
+  margin-bottom: 190px;
+  width: 100%;
+}
+#aboutme #about {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  background-color: #17171f;
+  background-image: url("/img/bg.png");
+  border-radius: 15px;
+}
+#aboutme #about #text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#aboutme #about #text h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #e9dabf;
+  font-size: 3rem;
+  text-align: center;
+}
+#aboutme #about #text p {
+  font-family: "Poiret One", cursive;
+  color: #e9dabf;
+  width: 75%;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#aboutme #ph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#aboutme #ph img {
+  width: 400px;
+  border-radius: 100%;
+}
+
+#cennik {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}
+#cennik #cennik-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#cennik #cennik-wrapper #cennik-ramka {
+  width: 50%;
+  border-radius: 15px;
+  background-color: #17171f;
+  display: flex;
+  background-color: #17171f;
+  background-image: url("/img/bg.png");
+  height: 600px;
+}
+#cennik #cennik-wrapper #cennik-ramka #service-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cennik #cennik-wrapper #cennik-ramka #service-text .unactive {
+  display: none;
+}
+#cennik #cennik-wrapper #cennik-ramka #service-text #defalut {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #e9dabf;
+  text-align: center;
+}
+#cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p {
+  font-family: "Poiret One", cursive;
+  color: #e9dabf;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+#cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p .first {
+  margin-right: 150px;
+}
+#cennik #cennik-wrapper #services-icons {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 230px 230px;
+  grid-template-rows: 230px 230px;
+  justify-content: center;
+  align-items: center;
+}
+#cennik #cennik-wrapper #services-icons .icons-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cennik #cennik-wrapper #services-icons .icons-div button {
+  background: none;
+  border: 0;
+}
+#cennik #cennik-wrapper #services-icons .icons-div img {
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s;
+}
+#cennik #cennik-wrapper #services-icons .icons-div p {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  color: #17171f;
+  font-size: 1.4rem;
+  width: 150px;
+  text-align: center;
+}
+#cennik #cennik-wrapper #services-icons .icons-div:hover img {
+  width: 128px;
+  height: 128px;
+  cursor: pointer;
+}
+
+#gallery-booksy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+#gallery-booksy #gallery-booksy-wrapper {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery {
+  width: 50%;
+  border-radius: 15px;
+  background-color: #17171f;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery .slide {
+  width: 100%;
+  max-width: 800px;
+  height: 800px;
+  position: absolute;
+  transition: all 0.5s;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #left, #gallery-booksy #gallery-booksy-wrapper #idgallery #right {
+  height: 100%;
+  width: 5%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #left button, #gallery-booksy #gallery-booksy-wrapper #idgallery #right button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #left img, #gallery-booksy #gallery-booksy-wrapper #idgallery #right img {
+  width: 64px;
+  height: 64px;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #left:hover, #gallery-booksy #gallery-booksy-wrapper #idgallery #right:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #left {
+  left: 0;
+}
+#gallery-booksy #gallery-booksy-wrapper #idgallery #right {
+  right: 0;
+}
+#gallery-booksy #gallery-booksy-wrapper #booksy {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gallery-booksy #gallery-booksy-wrapper #booksy h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #17171f;
+  font-size: 2.5rem;
+}
+#gallery-booksy #gallery-booksy-wrapper #booksy img {
+  width: 420px;
+  transition: all 0.5s;
+}
+#gallery-booksy #gallery-booksy-wrapper #booksy:hover img {
+  width: 550px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+footer a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+  height: 32px;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  color: #17171f;
+  transition: all 0.5s;
+}
+footer a img {
+  width: 32px;
+  margin-right: 10px;
+}
+footer a:hover {
+  letter-spacing: 5px;
+}
+
+#metka p {
+  text-align: center;
+  font-family: "Poiret One", cursive;
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0.8;
+  margin: 0;
+  transition: all 0.3s;
+}
+#metka p:hover {
+  font-size: 0.8rem;
+  opacity: 1;
+  letter-spacing: 3px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main {
+    width: 70vw;
+  }
+  nav {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    font-size: 0.7rem;
+  }
+  nav ul li a:hover {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  nav ul li #nav-logo {
+    width: 50px;
+  }
+  #aboutme {
+    margin-bottom: 50px;
+  }
+  #aboutme #about #text h1 {
+    font-size: 2rem;
+  }
+  #aboutme #about #text p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    margin-bottom: 25px;
+  }
+  #aboutme #ph img {
+    width: 150px;
+  }
+  #cennik {
+    margin-bottom: 50px;
+  }
+  #cennik #cennik-wrapper #cennik-ramka {
+    height: 350px;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #defalut {
+    font-size: 2rem;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p {
+    font-size: 1rem;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p .first {
+    margin-right: 70px;
+  }
+  #cennik #cennik-wrapper #services-icons {
+    grid-template-columns: 130px 130px;
+    grid-template-rows: 130px 130px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div img {
+    width: 64px;
+    height: 64px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div p {
+    font-size: 1rem;
+    width: 150px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div:hover img {
+    width: 96px;
+    height: 96px;
+  }
+  #gallery-booksy {
+    margin-bottom: 50px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper {
+    height: 350px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery .slide {
+    max-width: 500px;
+    height: 500px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery #left, #gallery-booksy #gallery-booksy-wrapper #idgallery #right {
+    height: 15%;
+    width: 15%;
+    border-radius: 50%;
+    bottom: 43%;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery #left img, #gallery-booksy #gallery-booksy-wrapper #idgallery #right img {
+    width: 32px;
+    height: 32px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy h2 {
+    font-size: 1.5rem;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy img {
+    width: 250px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy:hover img {
+    width: 320px;
+  }
+  footer {
+    margin-bottom: 10px;
+  }
+  footer a {
+    height: 16px;
+  }
+  footer a p {
+    font-size: 0.3rem;
+  }
+  footer a img {
+    width: 16px;
+    margin-right: 3px;
+  }
+  footer a:hover {
+    letter-spacing: 2px;
+  }
+  #metka p {
+    text-align: center;
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+    font-size: 0.5rem;
+    opacity: 0.7;
+    margin: 0;
+    transition: all 0.3s;
+  }
+  #metka p:hover {
+    font-weight: 0.3rem;
+    opacity: 1;
+    letter-spacing: 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  main {
+    width: 70vw;
+  }
+  nav {
+    height: 50px;
+    margin-bottom: 35px;
+  }
+  nav ul li a {
+    font-size: 0.7rem;
+  }
+  nav ul li a:hover {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+  nav ul li #nav-logo {
+    width: 50px;
+  }
+  #aboutme {
+    margin-bottom: 45px;
+  }
+  #aboutme #about {
+    flex-direction: column;
+  }
+  #aboutme #about #text {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  #aboutme #about #text h1 {
+    font-size: 2rem;
+  }
+  #aboutme #about #text p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+  #aboutme #about #ph {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  #aboutme #about #ph img {
+    width: 100px;
+  }
+  #cennik {
+    margin-bottom: 45px;
+  }
+  #cennik #cennik-wrapper {
+    flex-direction: column;
+  }
+  #cennik #cennik-wrapper #cennik-ramka {
+    width: 100%;
+    height: 350px;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text {
+    margin-bottom: 50px;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #defalut {
+    font-size: 1.7rem;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p {
+    font-size: 0.9rem;
+  }
+  #cennik #cennik-wrapper #cennik-ramka #service-text #mani-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #pedi-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #zdobienia-price p .first, #cennik #cennik-wrapper #cennik-ramka #service-text #brows-price p .first {
+    margin-right: 15px;
+  }
+  #cennik #cennik-wrapper #services-icons {
+    width: 100%;
+    margin-top: 30px;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-template-rows: 50px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div img {
+    width: 32px;
+    height: 32px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div p {
+    font-size: 0.8rem;
+    width: 95px;
+  }
+  #cennik #cennik-wrapper #services-icons .icons-div:hover img {
+    width: 48px;
+    height: 48px;
+  }
+  #gallery-booksy {
+    margin-bottom: 25px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery {
+    width: 75%;
+    height: 100%;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery .slide {
+    max-width: 350px;
+    height: 250px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery #left, #gallery-booksy #gallery-booksy-wrapper #idgallery #right {
+    height: 15%;
+    width: 10%;
+    border-radius: 50%;
+    bottom: 43%;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #idgallery #left img, #gallery-booksy #gallery-booksy-wrapper #idgallery #right img {
+    width: 25px;
+    height: 25px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy {
+    width: 100%;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy h2 {
+    font-size: 1rem;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy img {
+    width: 200px;
+  }
+  #gallery-booksy #gallery-booksy-wrapper #booksy:hover img {
+    width: 320px;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 25px;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  footer a {
+    margin-left: 40px;
+    height: 16px;
+  }
+  footer a p {
+    font-size: 0.4rem;
+  }
+  footer a img {
+    width: 12px;
+    margin-right: 2px;
+  }
+  footer a:hover {
+    letter-spacing: 1px;
+  }
+  #metka p {
+    text-align: center;
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+    font-size: 0.5rem;
+    opacity: 0.7;
+    margin: 0;
+    transition: all 0.3s;
+  }
+  #metka p:hover {
+    font-weight: 0.3rem;
+    opacity: 1;
+    letter-spacing: 3px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,676 @@
+@mixin bg-color {
+    background-color: #e9dabf;
+}
+
+@mixin section-div {
+    width: 50%;
+    border-radius: 15px;
+    background-color: #17171f;
+    display: flex;
+}
+
+@mixin div-color-one {
+    background-color: #e9dabf;
+}
+
+@mixin div-color-two {
+    background-image: url("/img/bg.png");
+}
+
+@mixin font {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+@mixin font-two {
+    font-family: 'Poiret One', cursive;
+}
+
+@mixin color-one {
+    color: #e9dabf;
+}
+
+@mixin color-two {
+    color: #17171f;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+   @include bg-color; 
+   display: flex;
+   justify-content: center;
+}
+
+main {
+    width: 1500px;
+    @include bg-color; 
+}
+
+nav {
+    height: 110px;
+    width: 100%;
+    margin-bottom: 100px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        li {
+            display: inline;
+            @include font;
+            text-align: center;
+            a {
+                font-size: 1.3rem;
+                text-decoration: none;
+                @include color-two;
+                transition: all .3s;
+            }
+            a:hover {
+                font-size: 1.4rem;
+                letter-spacing: 3px;
+            }
+            #nav-logo {
+                width: 110px;
+            }
+        }
+    }
+}
+
+#aboutme {
+    margin-bottom: 190px;
+    width: 100%;
+    #about {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        background-color: #17171f;
+        @include div-color-two;
+        border-radius: 15px;
+        #text {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                @include font;
+                @include color-one;
+                font-size: 3rem;
+                text-align: center;
+            }
+            p {
+                @include font-two;
+                @include color-one;
+                width: 75%;
+                font-size: 2rem;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    #ph {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img {
+            width: 400px;
+            border-radius: 100%;
+        }
+    }
+}
+
+#cennik {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 190px;
+    #cennik-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        #cennik-ramka {
+            @include section-div;
+            background-color: #17171f;
+            @include div-color-two;
+            height: 600px;
+            #service-text {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .unactive {
+                    display: none;
+                }
+                #defalut {
+                    font-size: 3rem;
+                    @include font;
+                    @include color-one;
+                    text-align: center;
+                }
+                #mani-price, #pedi-price, #zdobienia-price, #brows-price {
+                    p {
+                        @include font-two;
+                        @include color-one;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: space-between;
+                        .first {
+                            margin-right: 150px;
+                        }
+                    }
+                }
+            }
+        }
+        #services-icons {
+            width: 50%;
+            display: grid;
+            grid-template-columns: 230px 230px;
+            grid-template-rows: 230px 230px;
+            justify-content: center;
+            align-items: center;
+                .icons-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button {
+                        background: none;
+                        border: 0;
+                    }
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        transition: all .5s;
+                    }
+                    p {
+                        @include font-two;
+                        font-weight: bold;
+                        @include color-two;
+                        font-size: 1.4rem;
+                        width: 150px;
+                        text-align: center;
+                    }
+                }
+                .icons-div:hover {
+                    img {
+                        width: 128px;
+                        height: 128px;
+                        cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#gallery-booksy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    #gallery-booksy-wrapper {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        #idgallery {
+            @include section-div;
+            overflow: hidden;
+            position: relative;
+            .slide {
+                width: 100%;
+                max-width: 800px;
+                height: 800px;
+                position: absolute;
+                transition: all 0.5s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+              }
+            #left, #right {
+                height: 100%;
+                width: 5%;
+                background-color: rgba($color: #ffffff, $alpha: .3);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s;
+                button {
+                    background: none;
+                    border: 0;
+                    cursor: pointer;
+                }
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            #left:hover, #right:hover {
+                background-color: rgba($color: #ffffff, $alpha: .7);
+            }
+            #left {
+                left: 0;
+            }
+            #right {
+                right: 0;
+            }
+        }
+        #booksy {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                @include font;
+                @include color-two;
+                font-size: 2.5rem;
+            }
+            img {
+                width: 420px;
+                transition: all .5s;
+            }
+        }
+        #booksy:hover {
+            img {
+                width: 550px;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        align-items: center;
+        height: 32px;
+        @include font-two;
+        font-weight: bold;
+        @include color-two;
+        transition: all .5s;
+        img {
+            width: 32px;
+            margin-right: 10px;
+        }
+    }
+    a:hover {
+        letter-spacing: 5px;
+    }
+}
+
+#metka {
+    p {
+        text-align: center;
+        @include font-two;
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: .8;
+        margin: 0;
+        transition: all .3s;
+    }
+    p:hover {
+        font-size: .8rem;
+        opacity: 1;
+        letter-spacing: 3px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    main {
+        width: 70vw;
+    }
+
+    nav {
+        height: 50px;
+        margin-bottom: 10px;
+        ul {
+            li {
+                a {
+                    font-size: .7rem;
+                }
+                a:hover {
+                    font-size: .9rem;
+                    letter-spacing: 2px;
+                }
+                #nav-logo {
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+    #aboutme {
+        margin-bottom: 50px;
+        #about {
+            #text {
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: .7rem;
+                    margin-bottom: 10px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        #ph {
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+    #cennik {
+        margin-bottom: 50px;
+        #cennik-wrapper {
+            #cennik-ramka {
+                height: 350px;
+                #service-text {
+                    #defalut {
+                        font-size: 2rem;
+                    }
+                    #mani-price, #pedi-price, #zdobienia-price, #brows-price {
+                        p {
+                            font-size: 1rem;
+                            .first {
+                                margin-right: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+            #services-icons {
+                grid-template-columns: 130px 130px;
+                grid-template-rows: 130px 130px;
+                .icons-div {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+                    p {
+                        font-size: 1rem;
+                        width: 150px;
+                    }
+                }
+                .icons-div:hover {
+                    img {
+                        width: 96px;
+                        height: 96px;
+                    }
+                }
+            }
+        }
+    }
+
+    #gallery-booksy {
+        margin-bottom: 50px;
+        #gallery-booksy-wrapper {
+            height: 350px;
+            #idgallery {
+                .slide {
+                    max-width: 500px;
+                    height: 500px;
+                }
+                #left, #right {
+                    height: 15%;
+                    width: 15%;
+                    border-radius: 50%;
+                    bottom: 43%;
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+            #booksy {
+                h2 {
+                    font-size: 1.5rem;
+                }
+                img {
+                    width: 250px;
+                }
+            }
+            #booksy:hover {
+                img {
+                    width: 320px;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-bottom: 10px;
+        a {
+            height: 16px;
+            p {
+                font-size: .3rem;
+            }
+            img {
+                width: 16px;
+                margin-right: 3px;
+            }
+        }
+        a:hover {
+            letter-spacing: 2px;
+        }
+    }
+
+    #metka {
+        p {
+            text-align: center;
+            @include font-two;
+            font-weight: bold;
+            font-size: .5rem;
+            opacity: .7;
+            margin: 0;
+            transition: all .3s;
+        }
+        p:hover {
+            font-weight: .3rem;
+            opacity: 1;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    main {
+        width: 70vw;
+    }
+
+    nav {
+        height: 50px;
+        margin-bottom: 35px;
+        ul {
+            li {
+                a {
+                    font-size: .7rem;
+                }
+                a:hover {
+                    font-size: .9rem;
+                    letter-spacing: 2px;
+                }
+                #nav-logo {
+                    width: 50px;
+                }
+            }
+        }
+    }
+
+    #aboutme {
+        margin-bottom: 45px;
+        #about {
+            flex-direction: column;
+            #text {
+                width: 100%;
+                margin-bottom: 25px;
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: .7rem;
+                    margin-bottom: 10px;
+                }
+            }
+        #ph {
+            width: 100%;
+            margin-bottom: 25px;
+            img {
+                width: 100px;
+            }
+        }
+        }
+    }
+
+    #cennik {
+        margin-bottom: 45px;
+        #cennik-wrapper {
+            flex-direction: column;
+            #cennik-ramka {
+                width: 100%;
+                height: 350px;
+                #service-text {
+                    margin-bottom: 50px;
+                    #defalut {
+                        font-size: 1.7rem;
+                    }
+                    #mani-price, #pedi-price, #zdobienia-price, #brows-price {
+                        p {
+                            font-size: .9rem;
+                            .first {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            #services-icons {
+                width: 100%;
+                margin-top: 30px;
+                grid-template-columns: 90px 90px 90px 90px;
+                grid-template-rows: 50px;
+                .icons-div {
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    p {
+                        font-size: .8rem;
+                        width: 95px;
+                    }
+                }
+                .icons-div:hover {
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+            }
+        }
+    }
+
+    #gallery-booksy {
+        margin-bottom: 25px;
+        #gallery-booksy-wrapper {
+            flex-direction: column;
+            align-items: center;
+            height: 350px;
+            #idgallery {
+                width: 75%;
+                height: 100%;
+                .slide {
+                    max-width: 350px;
+                    height: 250px;
+                }
+                #left, #right {
+                    height: 15%;
+                    width: 10%;
+                    border-radius: 50%;
+                    bottom: 43%;
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+            #booksy {
+                width: 100%;
+                h2 {
+                    font-size: 1rem;
+                }
+                img {
+                    width: 200px;
+                }
+            }
+            #booksy:hover {
+                img {
+                    width: 320px;
+                }
+            }
+        }
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 25px;
+        gap: 10px;
+        margin-bottom: 10px;
+        a {
+            margin-left: 40px;
+            height: 16px;
+            p {
+                font-size: .4rem;
+            }
+            img {
+                width: 12px;
+                margin-right: 2px;
+            }
+        }
+        a:hover {
+            letter-spacing: 1px;
+        }
+    }
+
+    #metka {
+        p {
+            text-align: center;
+            @include font-two;
+            font-weight: bold;
+            font-size: .5rem;
+            opacity: .7;
+            margin: 0;
+            transition: all .3s;
+        }
+        p:hover {
+            font-weight: .3rem;
+            opacity: 1;
+            letter-spacing: 3px;
+        }
+    }
+}
